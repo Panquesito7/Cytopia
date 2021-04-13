@@ -62,7 +62,7 @@ jobs:
     
     - name: Custom steps
       run: |
-        sudo apt install libnoise-dev
+        sudo apt-get install --yes libsdl2-dev
         cmake -DENABLE_ANGELSCRIPT=OFF -DPACKAGE_MANAGER=pkgconfig -DBUILD_TEST=OFF .
         
 
