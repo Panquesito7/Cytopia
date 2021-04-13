@@ -62,7 +62,7 @@ jobs:
     
     - name: Custom steps
       run: |
-        sudo apt-get install --yes libsdl2-dev
+        sudo apt-get install --yes libsdl2-2.0-0 --fix-missing
         cmake -DENABLE_ANGELSCRIPT=OFF -DPACKAGE_MANAGER=pkgconfig -DBUILD_TEST=OFF .
         
 
