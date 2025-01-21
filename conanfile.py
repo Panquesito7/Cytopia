@@ -10,18 +10,19 @@ class Cytopia(ConanFile):
 
     def requirements(self):
         # self.requires("microprofile/3.1")
-        self.requires("angelscript/2.36.1")
+        self.requires("angelscript/2.37.0")
         self.requires("libnoise/1.0.0")
-        self.requires("libpng/1.6.40", force=True)
+        self.requires("libpng/1.6.45", force=True)
         self.requires("openal/1.22.2")
-        self.requires("sdl/2.28.2", force=True)
-        self.requires("sdl_image/2.0.5")
-        self.requires("sdl_ttf/2.20.2")
+        self.requires("sdl/2.30.9", force=True)
+        self.requires("sdl_image/2.8.2")
+        self.requires("sdl_ttf/2.24.0")
         self.requires("vorbis/1.3.7")
-        self.requires("zlib/1.3", force=True)
-        self.requires("libwebp/1.3.2", override=True)
+        self.requires("zlib/1.3.1", force=True)
+        self.requires("libwebp/1.5.0", override=True)
         if self.settings.os == "Linux":
-            self.requires("xz_utils/5.4.4", override=True)
+            self.requires("xz_utils/5.4.5", override=True)
+            self.requires("libalsa/1.2.13", override=True)
 
     def generate(self):
         for dep in self.dependencies.values():

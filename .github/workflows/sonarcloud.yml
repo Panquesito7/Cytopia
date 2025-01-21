@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install sonar-scanner and build-wrapper
-        uses: sonarsource/sonarcloud-github-c-cpp@v2
+        uses: sonarsource/sonarcloud-github-c-cpp@v3
         id: sonarscan
 
       - name: Download and set up sonar-scanner
@@ -28,7 +28,7 @@ jobs:
 
       - name: Cache conan
         id: cache-conan
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: conan-linux-${{ hashFiles('conanfile.py') }}
           path: ~/.conan2/
